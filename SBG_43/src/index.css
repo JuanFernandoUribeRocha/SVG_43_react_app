@@ -1,0 +1,65 @@
+/* Paleta oscura inspirada en GitHub, con naranja como color principal */
+:root {
+  --fondo: #0d1117;
+  --superficie: #161b22;
+  --superficie-alta: #21262d;
+  --borde: #30363d;
+  --borde-campo: #6e7681;
+  --texto: #e6edf3;
+  --texto-secundario: #8b949e;
+  --acento: #f0883e;
+  --acento-oscuro: #db6d28;
+  --texto-sobre-acento: #0d1117;
+  --verde: #3fb950;
+  --peligro: #f85149;
+  --peligro-fondo: #2d1517;
+  --alto-frase: 0px;
+  color-scheme: dark;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --alto-frase: 96px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.4;
+  color: var(--texto);
+  background-color: var(--fondo);
+}
+
+a {
+  color: var(--acento);
+}
+
+input,
+select,
+textarea {
+  color: var(--texto);
+  background-color: var(--superficie);
+}
+
+/* Contorno visible al navegar con teclado */
+:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 2px;
+}
+
+/* Texto que solo leen los lectores de pantalla */
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
